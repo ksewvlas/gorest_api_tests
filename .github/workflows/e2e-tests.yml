@@ -19,7 +19,13 @@ jobs:
           node-version: 18.4.0
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Run Linters
+        run: npm run lint
+
+      - name: Run Formatters
+        run: npm run format
 
       - name: Run E2E Tests
         run: npm run test:e2e
