@@ -7,7 +7,7 @@ module.exports = {
     [
       "jest-html-reporters",
       {
-        publicPath: "./test_results",
+        publicPath: "./test_results/jest-html-reporters-attach",
         filename: "report.html",
         includeFailureMsg: true,
       },

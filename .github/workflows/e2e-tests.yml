@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-          node-version: '16'
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -35,15 +33,5 @@ jobs:
       - name: Archive Jest Report
         uses: actions/upload-artifact@v2
         with:
-          node-version: '16'
           name: jest-report
-          path: ./test_results/report.html
-
-      - name: Debug Jest HTML Report
-        run: |
-          ls -l ./test_results
-          cat ./test_results/report.html
-      - name: Adjust Permissions
-        run: |
-             chmod -R 777 ./test_results
-
+          path: ./test_results/jest-html-reporters-attach/report.html
