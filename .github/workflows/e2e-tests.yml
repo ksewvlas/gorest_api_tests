@@ -27,9 +27,6 @@ jobs:
       - name: Run Formatters
         run: npm run format
 
-      - name: Create Directory
-        run: mkdir ./test_results
-
       - name: Run E2E Tests
         run: npm run test:e2e
 
