@@ -43,8 +43,7 @@ jobs:
         run: |
           ls -l ./test_results
           cat ./test_results/report.html
-
-      - name: Debug Permissions
+      - name: Adjust Permissions
         run: |
-              echo "Permissions for Jest report directory:"
-              ls -l ./test_results
+             chmod -R 777 ./test_results
+
