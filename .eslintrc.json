@@ -1,0 +1,33 @@
+//{
+//  "env": {
+//    "browser": true,
+//    "es2021": true
+//  },
+//  "extends": ["plugin:prettier/recommended"],
+//  //    "extends": "eslint:recommended",
+//  "parserOptions": {
+//    "ecmaVersion": "latest",
+//    "sourceType": "module"
+//  },
+//  "rules": {}
+//}
+
+
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:jest/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["jest", "prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
