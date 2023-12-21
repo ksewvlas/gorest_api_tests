@@ -5,9 +5,8 @@ module.exports = {
   "reporters": [
       "default",
       ["jest-html-reporters", {
-        "publicPath": "./html-report",
-        "filename": "report.html",
-        "expand": true
+        outputPath: 'test-results/e2e_tests/report.html',
+        includeFailureMsg: true
       }]
     ]
 };

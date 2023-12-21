@@ -10,8 +10,7 @@
     "jest": "^29.7.0",
     "jest-html-reporters": "^3.1.6",
     "prettier": "^3.1.1",
-    "supertest": "^6.3.3",
-    "winston": "^3.11.0"
+    "supertest": "^6.3.3"
   },
   "scripts": {
     "lint": "eslint src/ tests/",

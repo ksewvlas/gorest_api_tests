@@ -29,3 +29,9 @@ jobs:
 
       - name: Run E2E Tests
         run: npm run test:e2e
+
+      - name: Archive Jest Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jest-report
+          path: test-results/e2e_tests/report.html
