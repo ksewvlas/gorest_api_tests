@@ -37,10 +37,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jest-report
-          path: ./test_results/jest-html-reporters-attach/report.html
+          path: ./jest_html_reporters.html
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          artifact_dir: ./test_results/jest-html-reporters-attach/report.html
+          artifact_dir: ./jest_html_reporters.html
