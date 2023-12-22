@@ -38,8 +38,8 @@ Before running the tests, ensure that the following prerequisites are installed:
    npm run test:e2e
 
 6. Viewing test report: 
-
    After running the tests, detailed test report is available in the *gorest_api_tests/test_results* directory.
+
 
 
 
