@@ -39,10 +39,8 @@ jobs:
           name: jest-report
           path: ./test_results/jest-html-reporters-attach/report.html
 
-      - name: Delay before Archiving
-        run: sleep 5
-
-      - name: Debug Artifacts
-        run: |
-          ls -R ./test_results
-          cat ./test_results/jest-html-reporters-attach/report.html
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_dir: ./test_results/jest-html-reporters-attach/report.html
