@@ -37,10 +37,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jest-html-report
-          path: ./
+          path: coverage/lcov-report
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           branch: gh-pages
-          folder: ./
+          folder: coverage/lcov-report

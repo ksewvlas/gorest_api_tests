@@ -29,7 +29,7 @@ Before running the tests, ensure that the following prerequisites are installed:
    - Click on Login user drop down -> Access Token
 4. Run all tests:
    ```bash
-   npx jest
+   npm run test:e2e
 
 ## Test Scenarios
 
@@ -88,7 +88,6 @@ Before running the tests, ensure that the following prerequisites are installed:
 | Test Case                                  | Description                                           |
 |--------------------------------------------| ----------------------------------------------------- |
 | should delete user successfully by userId  | Deletes a user and validates the successful deletion. |
-|                                            |                                                       |
 
 ### Delete User - Negative Scenarios
 | Test Case                                             | Description                                                                         |
