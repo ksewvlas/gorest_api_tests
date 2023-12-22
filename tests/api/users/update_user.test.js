@@ -2,10 +2,12 @@ const {
   createUser,
   getUserById,
   updateUser,
+  getUsers,
 } = require("../../../src/utils/api");
 const {
   generateRandomUserData,
   cleanupUser,
+  waitForSuccessfulResponse,
 } = require("../../../src/utils/userUtils");
 const { getApiConfig } = require("../../../src/utils/config");
 
@@ -17,6 +19,8 @@ describe("Update User - Positive Scenarios", () => {
     const newUser = generateRandomUserData();
     const responseCreateUser = await createUser(validToken, newUser);
     createdUser = responseCreateUser.body;
+
+    await waitForSuccessfulResponse(() => getUsers(validToken));
   });
 
   afterEach(async () => {
@@ -54,6 +58,8 @@ describe("Update User - Negative Scenarios", () => {
     const newUser = generateRandomUserData();
     const responseCreateUser = await createUser(validToken, newUser);
     createdUser = responseCreateUser.body;
+
+    await waitForSuccessfulResponse(() => getUsers(validToken));
   });
 
   afterEach(async () => {
