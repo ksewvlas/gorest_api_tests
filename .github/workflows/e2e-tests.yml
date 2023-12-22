@@ -1,0 +1,43 @@
+name: E2E Tests
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Linters
+        run: npm run lint
+
+      - name: Run Formatters
+        run: npm run format
+
+      - name: Run E2E Tests
+        run: npm run test:e2e
+
+      - name: Archive Jest HTML report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jest-html-report
+          path: ./test_results
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          branch: gh-pages
+          folder: ./test_results
