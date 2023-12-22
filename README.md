@@ -9,13 +9,10 @@ Before running the tests, ensure that the following prerequisites are installed:
 
 - **Node.js:** [Download and Install Node.js](https://nodejs.org/)
 - **NPM:** Included with Node.js installation
-- **Jest:** Install using `npm install --save-dev jest`
-- **Supertest:** Install using `npm install --save-dev supertest`
 
 ## Setup
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/ksewvlas/gorest_api_tests.git
    cd gorest_api_tests/
@@ -23,13 +20,28 @@ Before running the tests, ensure that the following prerequisites are installed:
 2. Install Dependencies:
    ```bash
    npm install
+
 3. Generate Token for external API:
-   ```bash
    - Open the URL "https://gorest.co.in/" -> Login / SignUp
-   - Click on Login user drop down -> Access Token
-4. Run all tests:
+   - Click on Login user drop down -> API Tokens
+   - Generate new token
+   - Copy your token
+
+
+4. Replace Token in Configuration:
+   - Open the gorest_api_tests/src/utils/config.js file in your text editor (IDE).
+   - Locate the <validToken> and replace it with the actual access token you generated in step 3.
+
+
+5. Run all tests:
    ```bash
    npm run test:e2e
+
+6. Viewing test report: 
+
+   After running the tests, detailed test report is available in the gorest_api_tests/test_result directory.
+
+
 
 ## Test Scenarios
 
@@ -39,7 +51,6 @@ Before running the tests, ensure that the following prerequisites are installed:
 | **Retrieve User**                  | Test scenarios for retrieving user details and user lists.             |
 | **Update User**                    | Test scenarios for updating user details.                              |
 | **Delete User**                    | Test scenarios for deleting a user.                                    |
-| **Retrieve Users with Pagination** | Test scenarios for paginated retrieval of users.                       |
 
 
 ### Create User - Positive Scenarios
