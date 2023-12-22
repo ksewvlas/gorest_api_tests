@@ -34,12 +34,7 @@ jobs:
         run: npm run test:e2e
 
       - name: Archive Jest Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: jest-report
           path: ./jest_html_reporters.html
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_dir: ./jest_html_reporters.html
