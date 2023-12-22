@@ -18,16 +18,5 @@
     "lint-fix": "eslint --fix src/ tests/",
     "format": "prettier --write src/ tests/",
     "test:e2e": "jest"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "reporters": [
-      "default",
-      "jest-html-reporter"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "html"
-    ]
   }
 }
