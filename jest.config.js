@@ -4,13 +4,13 @@ module.exports = {
   setupFiles: ["./jest.setup.js"],
   reporters: [
     "default",
-    "jest-html-reporters",
-    {
-      publicPath: "./test_results",
-      filename: "report.html",
-      includeFailureMsg: true,
-    },
+    [
+      "jest-html-reporters",
+      {
+        publicPath: "./test_results",
+        filename: "report.html",
+        includeFailureMsg: true,
+      },
+    ],
   ],
-  collectCoverage: true,
-  coverageDirectory: "./test_results",
 };

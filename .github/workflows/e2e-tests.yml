@@ -21,9 +21,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Install jest-html-reporters
-        run: npm install jest-html-reporters
-
       - name: Run Linters
         run: npm run lint
 
