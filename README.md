@@ -29,8 +29,8 @@ Before running the tests, ensure that the following prerequisites are installed:
 
 
 4. Replace Token in Configuration:
-   - Open the gorest_api_tests/src/utils/config.js file in your text editor (IDE).
-   - Locate the <validToken> and replace it with the actual access token you generated in step 3.
+   - Open the *gorest_api_tests/src/utils/config.js* file in your text editor (IDE).
+   - Locate the **validToken** and replace it with the actual access token you generated in step 3.
 
 
 5. Run all tests:
@@ -38,8 +38,8 @@ Before running the tests, ensure that the following prerequisites are installed:
    npm run test:e2e
 
 6. Viewing test report: 
+   After running the tests, detailed test report is available in the *gorest_api_tests/test_results* directory.
 
-   After running the tests, detailed test report is available in the gorest_api_tests/test_result directory.
 
 
 
