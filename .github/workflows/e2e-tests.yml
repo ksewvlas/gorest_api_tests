@@ -32,3 +32,9 @@ jobs:
 
       - name: Run E2E Tests
         run: npm run test:e2e
+
+      - name: Archive Jest HTML report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jest-html-report
+          path: coverage/lcov-report
